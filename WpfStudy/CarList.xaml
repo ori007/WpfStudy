@@ -5,27 +5,40 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:cs="clr-namespace:WpfStudy"
         mc:Ignorable="d"
-        Title="CarList" Height="300" Width="300">
-    <Window.Resources>
-        <cs:Cars x:Key="rsCarList">
+        Title="자동차정보" Height="300" Width="350">
+    <Window.Resources> <!--리소스 mockup-->
+        <cs:Cars x:Key="rsCar
+                 
+                 List">
             <cs:Car Company="흉기" CarName="제네실수" />
             <cs:Car Company="흉기2" CarName="제네실수" />
             <cs:Car Company="흉기3" CarName="제네실수" />
             <cs:Car Company="흉기4" CarName="제네실수" />
+            <cs:Car Company="흉기5" CarName="제네실수" />
         </cs:Cars>
+        <DataTemplate x:Key="dtListBox">
+            <Border Name="border" BorderBrush="Aqua" BorderThickness="1" Padding="5" Margin="5" >
+                <Grid>
+                    <Grid.RowDefinitions>
+                        <RowDefinition/>
+                        <RowDefinition/>
+                    </Grid.RowDefinitions>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition/>
+                        <ColumnDefinition/>
+                    </Grid.ColumnDefinitions>
+                    <TextBlock Grid.Row="0" Grid.Column="0" Text="Company:" />
+                    <TextBlock Grid.Row="0" Grid.Column="1" Text="{Binding Path=Company}" />
+                    <TextBlock Grid.Row="1" Grid.Column="0" Text="CarName:" />
+                    <TextBlock Grid.Row="1" Grid.Column="1" Text="{Binding Path=CarName}" />
+                </Grid>
+            </Border>
+        </DataTemplate>
     </Window.Resources>
-    <StackPanel DataContext="{StaticResource rsCarList}">
-        <TextBlock Name="txtName" FontSize="20" Margin="10,0,0,0" Text="Car List:" />
-        <ListBox Width="260" Margin="10" ItemsSource="{Binding}">
-            <ListBox.ItemTemplate>
-                <DataTemplate>
-                    <TextBlock>
-                        <TextBlock Text="{Binding Path=Company}" />
-                        <TextBlock Text=": " />
-                        <TextBlock Text="{Binding Path=CarName}" />
-                    </TextBlock>
-                </DataTemplate>
-            </ListBox.ItemTemplate>
-        </ListBox>
-    </StackPanel>
+    <ScrollViewer VerticalScrollBarVisibility="Auto" Margin="0,0,0,0">
+        <StackPanel DataContext="{StaticResource rsCarList}" Margin="0,0,5,0">
+            <TextBlock Name="txtName" FontSize="20" Margin="10,0,0,0" Text="Car List:" />
+            <ListBox Width="260" Margin="10"  HorizontalContentAlignment="Stretch" ItemsSource="{Binding}" ItemTemplate="{StaticResource dtListBox}"/>
+        </StackPanel>
+    </ScrollViewer>
 </Window>

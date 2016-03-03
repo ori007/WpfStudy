@@ -23,8 +23,6 @@ namespace WpfStudy
         {
             //InitializeComponent();
         }
-
-       
     }
 
     public class Cars : ObservableCollection<Car>
