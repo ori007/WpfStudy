@@ -24,6 +24,16 @@ namespace WpfStudy
             //InitializeComponent();
         }
 
+       
+    }
+
+    public class Cars : ObservableCollection<Car>
+    {
+    }
+
+
+    public class Car
+    {
         string company = string.Empty;
         public string Company
         {
@@ -33,7 +43,7 @@ namespace WpfStudy
             }
             set
             {
-                company = value;    
+                company = value;
             }
         }
 
@@ -49,16 +59,14 @@ namespace WpfStudy
                 carname = value;
             }
         }
-        public void Car(string company, string carName)
+        public Car() : this(string.Empty,string.Empty)
+        {
+        }
+        public Car(string company, string carName)
         {
             this.Company = company;
             this.CarName = carName;
         }
     }
-
-    public class Cars : ObservableCollection<CarList>
-    {
-    }
-
 
 }
