@@ -61,6 +61,9 @@
     <Compile Include="Basic\AnimationTest.xaml.cs">
       <DependentUpon>AnimationTest.xaml</DependentUpon>
     </Compile>
+    <Compile Include="RoutedEvent\RoutedEventTest.xaml.cs">
+      <DependentUpon>RoutedEventTest.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Template\ControlTemplate.xaml.cs">
       <DependentUpon>ControlTemplate.xaml</DependentUpon>
     </Compile>
@@ -82,6 +85,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="Basic\CarList.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="RoutedEvent\RoutedEventTest.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
