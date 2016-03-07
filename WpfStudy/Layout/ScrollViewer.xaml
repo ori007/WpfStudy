@@ -1,0 +1,21 @@
+﻿<Window x:Class="WpfStudy.Layout.ScrollViewer"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WpfStudy.Layout"
+        mc:Ignorable="d"
+        Title="ScrollViewer" Height="300" Width="300">
+    <ScrollViewer>
+        <StackPanel>
+            <TextBlock Background="#FFFF0000" Text="1" Width="Auto" Height="30" TextAlignment="Center" FontSize="20" />
+            <TextBlock Background="#FFFF8C00" Text="2" Width="Auto" Height="30" TextAlignment="Center" FontSize="20" />
+            <TextBlock Background="#FFFFF600" Text="3" Width="Auto" Height="30" TextAlignment="Center" FontSize="20" />
+            <TextBlock Background="#FF4BE448" Text="4" Width="Auto" Height="30" TextAlignment="Center" FontSize="20" />
+            <TextBlock Background="#FF0038FF" Text="5" Width="Auto" Height="30" TextAlignment="Center" FontSize="20" />
+            <TextBlock Background="#FF061084" Text="6" Width="Auto" Height="30" TextAlignment="Center" FontSize="20" />
+            <TextBlock Background="#FFB104B5" Text="7" Width="Auto" Height="30" TextAlignment="Center" FontSize="20" />
+            <TextBlock Background="#FF000000" Text="8" Width="Auto" Height="30" TextAlignment="Center" FontSize="20" Foreground="#FFFFFFFF" />
+        </StackPanel>
+    </ScrollViewer>
+</Window>

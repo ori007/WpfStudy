@@ -1,0 +1,42 @@
+﻿<Window x:Class="WpfStudy.Basic.CarList"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:cs="clr-namespace:WpfStudy.Basic"
+        mc:Ignorable="d"
+        Title="자동차정보" Height="300" Width="350">
+    <Window.Resources> <!--리소스 mockup-->
+        <cs:Cars x:Key="rsCarList">
+            <cs:Car Company="흉기" CarName="제네실수" />
+            <cs:Car Company="흉기2" CarName="제네실수" />
+            <cs:Car Company="흉기3" CarName="제네실수" />
+            <cs:Car Company="흉기4" CarName="제네실수" />
+            <cs:Car Company="흉기5" CarName="제네실수" />
+        </cs:Cars>
+        <DataTemplate x:Key="dtListBox">
+            <Border Name="border" BorderBrush="Aqua" BorderThickness="1" Padding="5" Margin="5" >
+                <Grid>
+                    <Grid.RowDefinitions>
+                        <RowDefinition/>
+                        <RowDefinition/>
+                    </Grid.RowDefinitions>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition/>
+                        <ColumnDefinition/>
+                    </Grid.ColumnDefinitions>
+                    <TextBlock Grid.Row="0" Grid.Column="0" Text="Company:" />
+                    <TextBlock Grid.Row="0" Grid.Column="1" Text="{Binding Path=Company}" />
+                    <TextBlock Grid.Row="1" Grid.Column="0" Text="CarName:" />
+                    <TextBlock Grid.Row="1" Grid.Column="1" Text="{Binding Path=CarName}" />
+                </Grid>
+            </Border>
+        </DataTemplate>
+    </Window.Resources>
+    <ScrollViewer VerticalScrollBarVisibility="Auto" Margin="0,0,0,0">
+        <StackPanel DataContext="{StaticResource rsCarList}" Margin="0,0,5,0">
+            <TextBlock Name="txtName" FontSize="20" Margin="10,0,0,0" Text="Car List:" />
+            <ListBox Width="260" Margin="10"  HorizontalContentAlignment="Stretch" ItemsSource="{Binding}" ItemTemplate="{StaticResource dtListBox}"/>
+        </StackPanel>
+    </ScrollViewer>
+</Window>

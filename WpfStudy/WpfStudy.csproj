@@ -58,36 +58,57 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
-    <Compile Include="ControlTemplate.xaml.cs">
+    <Compile Include="Basic\AnimationTest.xaml.cs">
+      <DependentUpon>AnimationTest.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Template\ControlTemplate.xaml.cs">
       <DependentUpon>ControlTemplate.xaml</DependentUpon>
     </Compile>
-    <Compile Include="ResourceWPF.xaml.cs">
+    <Compile Include="Converter\DateConverter.xaml.cs">
+      <DependentUpon>DateConverter.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Converter\PostDateConverter.cs" />
+    <Compile Include="Layout\ScrollViewer.xaml.cs">
+      <DependentUpon>ScrollViewer.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Layout\ViewBox.xaml.cs">
+      <DependentUpon>ViewBox.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Template\ResourceWPF.xaml.cs">
       <DependentUpon>ResourceWPF.xaml</DependentUpon>
     </Compile>
-    <Page Include="CarList.xaml">
+    <Page Include="Basic\AnimationTest.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="ControlTemplate.xaml">
+    <Page Include="Basic\CarList.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="MainWindow.xaml">
-      <Generator>MSBuild:Compile</Generator>
+    <Page Include="Template\ControlTemplate.xaml">
       <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Converter\DateConverter.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
     </Page>
     <Compile Include="App.xaml.cs">
       <DependentUpon>App.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="CarList.xaml.cs">
+    <Compile Include="Basic\CarList.xaml.cs">
       <DependentUpon>CarList.xaml</DependentUpon>
     </Compile>
-    <Compile Include="MainWindow.xaml.cs">
-      <DependentUpon>MainWindow.xaml</DependentUpon>
-      <SubType>Code</SubType>
-    </Compile>
-    <Page Include="ResourceWPF.xaml">
+    <Page Include="Layout\ScrollViewer.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Layout\ViewBox.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Template\ResourceWPF.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

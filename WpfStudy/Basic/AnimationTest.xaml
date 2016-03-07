@@ -1,0 +1,42 @@
+﻿<Window x:Class="WpfStudy.Basic.AnimationTest"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WpfStudy.Basic"
+        mc:Ignorable="d"
+        Title="AnimationTest" Height="300" Width="300">
+    <StackPanel>
+        <Button Name="opacityAnimatedButton" Content="A버튼">
+            <Button.Triggers>
+                <EventTrigger RoutedEvent="Button.Click">
+                    <BeginStoryboard>
+                        <Storyboard>
+                            <DoubleAnimation
+                                Storyboard.TargetName="opacityAnimatedButton"
+                                Storyboard.TargetProperty="(Button.Opacity)"
+                                From="1" To="0" Duration="0:0:5" AutoReverse="True"/>
+                        </Storyboard>
+                    </BeginStoryboard>
+                </EventTrigger>
+            </Button.Triggers>
+        </Button>
+        <Button Content="A버튼" >
+            <Button.Background>
+                <SolidColorBrush x:Name="MyAnimatedBrush" Color="Orange" />
+            </Button.Background>
+            <Button.Triggers> <!--EventTrigger 확인-->
+                <EventTrigger RoutedEvent="Button.Click">
+                    <BeginStoryboard>
+                        <Storyboard> 
+                            <DoubleAnimation
+                                Storyboard.TargetName="MyAnimatedBrush"
+                                Storyboard.TargetProperty="(Brush.Opacity)"
+                                From="1" To="0" Duration="0:0:5" AutoReverse="True"/>
+                        </Storyboard>
+                    </BeginStoryboard>
+                </EventTrigger>
+            </Button.Triggers>
+        </Button>
+    </StackPanel>
+</Window>

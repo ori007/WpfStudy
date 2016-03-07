@@ -1,8 +1,8 @@
 ﻿<Application x:Class="WpfStudy.App"
              xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
-             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"             
              xmlns:local="clr-namespace:WpfStudy"
-             StartupUri="ControlTemplate.xaml">
+             StartupUri="Layout\ScrollViewer.xaml">
     <Application.Resources>
          
     </Application.Resources>

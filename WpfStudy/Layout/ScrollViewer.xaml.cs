@@ -12,21 +12,16 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
 
-namespace WpfStudy
+namespace WpfStudy.Layout
 {
     /// <summary>
-    /// ControlTemplate.xaml에 대한 상호 작용 논리
+    /// ScrollViewer.xaml에 대한 상호 작용 논리
     /// </summary>
-    public partial class ControlTemplate : Window
+    public partial class ScrollViewer : Window
     {
-        public ControlTemplate()
+        public ScrollViewer()
         {
             InitializeComponent();
-        }
-
-        private void BtnTest_Click(object sender, RoutedEventArgs e)
-        {
-            MessageBox.Show("클릭 되었습니다.");
         }
     }
 }
