@@ -7,9 +7,7 @@
         mc:Ignorable="d"
         Title="자동차정보" Height="300" Width="350">
     <Window.Resources> <!--리소스 mockup-->
-        <cs:Cars x:Key="rsCar
-                 
-                 List">
+        <cs:Cars x:Key="rsCarList">
             <cs:Car Company="흉기" CarName="제네실수" />
             <cs:Car Company="흉기2" CarName="제네실수" />
             <cs:Car Company="흉기3" CarName="제네실수" />

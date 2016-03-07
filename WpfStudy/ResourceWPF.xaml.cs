@@ -23,5 +23,20 @@ namespace WpfStudy
         {
             InitializeComponent();
         }
+
+        private void btnNormal_Click(object sender, RoutedEventArgs e)
+        {
+            label1.Style = null;
+        }
+
+        private void btnRes1_Click(object sender, RoutedEventArgs e)
+        {
+            label1.Style = (Style)FindResource("LabelStyle1");
+        }
+
+        private void btnRes2_Click(object sender, RoutedEventArgs e)
+        {
+            label1.Style = (Style)FindResource("LabelStyle2");
+        }
     }
 }
